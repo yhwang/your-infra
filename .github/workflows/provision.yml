@@ -22,5 +22,4 @@ jobs:
         org: ${{ secrets.ORG }}
         space: ${{ secrets.SPACE }}
         resource: ${{ secrets.RESOURCE }}
-        commit: ${{ env.GITHUB_SHA }}
         filename: ${{ inputs.filename }}
