@@ -12,7 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      uses: yhwang/infra-provisioner@v1
+    - name: create infra
+      uses: yhwang/infra-provisioner@v1.1
       with:
-        param1: 'myparam'
+        api-key: ${{ secrets.API_KEY }}
+        region: ${{ secrets.REGION }}
+        org: ${{ secrets.ORG }}
+        space: ${{ secrets.SPACE }}
+        resource: ${{ secrets.RESOURCE }}
